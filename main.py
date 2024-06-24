@@ -12,10 +12,11 @@ def count_words(book_contents):
 def count_characters(book_contents):
     character_count = dict()
     for character in book_contents:
+        lowered = character.lower()
         if character in character_count.keys():
-            character_count[character] += 1
+            character_count[lowered] += 1
         else:
-            character_count[character] = 1
+            character_count[lowered] = 1
     print(f"Character count, by character, of book: {character_count}")
 
 main()
