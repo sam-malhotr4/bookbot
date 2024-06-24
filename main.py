@@ -31,7 +31,7 @@ def print_alphabet_occurences_asc(character_count_dict):
             alphabet_occur_list.append({"character":key, "num": character_count_dict[key]})
     alphabet_occur_list.sort(reverse=True, key=sort_on)
     for alph_occ in alphabet_occur_list:
-        print(f"The '{alph_occ.character}' character was found {alph_occ.num} times")
+        print(f"The '{alph_occ['character']}' character was found {alph_occ['num']} times")
 
 def get_book_text(path):
     with open(path) as f:
